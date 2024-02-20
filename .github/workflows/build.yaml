@@ -1,9 +1,13 @@
 name: Build Docker Image
 
-on: 
+on:
   push:
     branches:
       - main
+    paths:
+      - Dockerfile
+      - .env
+      - .github/workflows/build.yaml
   release:
     types:
       - published

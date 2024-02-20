@@ -1,6 +1,7 @@
 FROM node:20.11.1-slim
 
-RUN npm install -g sass
+ARG SASS_VERSION
+RUN npm install -g sass@${SASS_VERSION}
 
 VOLUME /src
 

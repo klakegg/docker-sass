@@ -35,7 +35,7 @@ jobs:
           tags: klakegg/sass:edge
           platforms: linux/amd64,linux/arm64
 
-      - name: Build and push [latest]
+      - name: Build and push [versioned]
         uses: docker/build-push-action@v5
         if: startsWith(github.ref, 'refs/tags/')
         with:
